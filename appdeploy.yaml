@@ -5,7 +5,7 @@ metadata:
   labels:
     app: vproapp
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: vproapp
@@ -27,7 +27,7 @@ spec:
         command: ['sh', '-c', 'until nc -z -v -w30 vprodb 3306; do echo "Waiting for database..."; sleep 5; done;']
       - name: init-wait-for-rmq
         image: busybox
-        command: ['sh', '-c', 'until nc -z -v -w30 vprormq 5672; do echo "Waiting for RabbitMQ..."; sleep 5; done;']
+        command: ['sh', '-c', 'until nc -z -v -w30 vprormq01 5672; do echo "Waiting for RabbitMQ..."; sleep 5; done;']
       - name: init-wait-for-mc
         image: busybox
         command: ['sh', '-c', 'until nc -z -v -w30 vprocache01 11211; do echo "Waiting for Memcached..."; sleep 5; done;']    

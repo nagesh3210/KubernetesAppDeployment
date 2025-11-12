@@ -5,10 +5,9 @@ metadata:
   labels:
     app: vprodb
 spec:
+  storageClassName: default
   accessModes:
     - ReadWriteOnce
-  volumeMode: Filesystem
   resources:
     requests:
       storage: 3Gi
-  storageClassName: default

@@ -7,9 +7,9 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: vprofile.hanainfo.xyz
+  - host: vprofile.hkhinfoteck.xyz
     http:
-      paths: 
+      paths:
       - path: /
         pathType: Prefix
         backend:
