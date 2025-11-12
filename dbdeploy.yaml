@@ -38,7 +38,7 @@ spec:
       initContainers:
       - name: init-mydb
         image: busybox
-        command: ['rm', '-rf', '/var/lib/mysql/lost+found']
+        command: ["rm", "-rf", "/var/lib/mysql/lost+found"]
         volumeMounts:
         - name: vpro-db-data
           mountPath: /var/lib/mysql
