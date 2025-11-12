@@ -24,7 +24,7 @@ spec:
         - name: MYSQL_ROOT_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: app-secretss
+              name: app-secrets
               key: db-pass
         volumeMounts:
         - name: vpro-db-data
@@ -41,4 +41,4 @@ spec:
       volumes:
       - name: vpro-db-data
         persistentVolumeClaim:
-          claimName: db-pv-claimn
+          claimName: db-pv-claim
